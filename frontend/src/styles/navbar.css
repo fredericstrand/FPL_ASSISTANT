@@ -1,0 +1,178 @@
+/* General navbar styling */
+.navbar-container {
+  width: 100%;
+  padding: 10px;
+  background-color: #492756;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  height: 60px;
+}
+
+/* Brand logo and title */
+.brand-title {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  margin-left: 50px;
+  justify-content: center;
+}
+
+/* Divider line between logo and nav links */
+.divider {
+  justify-content: left;
+  height: 100%;
+  width: 2px;
+  margin-left: 30px;
+  background-color: #E6E6FA;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  flex-grow: 5;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding-left: 20px;
+  padding-right: 120px;
+}
+
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.nav-links a:hover {
+  background-color: #E6E6FA;
+  color: #2F2F2F;
+}
+
+/* Login button styling */
+#login-button {
+  background-color: #E6E6FA;
+  color: #3e1f47;
+  padding: 8px 15px;
+  margin-left: 90px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+#login-button:hover {
+  background-color: #c5c8d4;
+}
+
+/* Burger menu */
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .navbar {
+      justify-content: flex-start;
+  }
+
+  .logo {
+      width: 100px;
+      height: auto;
+      margin-right: 15px;
+  }
+
+  .burger {
+      display: flex;
+  }
+
+  .nav-links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      height: 100vh;
+      width: 50%;
+      background-color: #3e1f47;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  }
+
+  .nav-active {
+      transform: translateX(0);
+  }
+
+  .nav-links li {
+      padding: 10px;
+  }
+
+  .divider {
+      display: none;
+  }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 480px) {
+  .nav-links {
+      width: 100%;
+      align-items: center;
+  }
+
+  .logo {
+      width: 80px;
+      margin-left: 10px;
+  }
+
+  .nav-links a {
+      font-size: 1rem;
+  }
+
+  #login-button {
+      padding: 6px 12px;
+      margin-left: 0;
+  }
+}

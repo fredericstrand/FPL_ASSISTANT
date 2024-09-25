@@ -1,0 +1,14 @@
+.hero-container {
+    background-image: url("../../public/images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 700px;
+    width: 100%;
+}
+.hero-content {
+    width:35%;
+    height:auto;
+    margin-top:200px;
+    margin-left:200px;
+    background-color:#228B22 ;
+}
